@@ -13,7 +13,6 @@ export function LoginPage() {
   const [postCodeError, setPostCodeError] = useState(false);
 
   let lastNameValidation = ({ target }) => {
-    console.log('>Prop', target.value);
     if (target.value.length < 50) {
       setLastName(target.value);
       setLastNameError(false);
@@ -100,16 +99,17 @@ export function LoginPage() {
               disabled={
                 lastNameError ||
                 postCodeError ||
-                lastName === '' ||
+                lastName.replace(/\s/g, '') === '' ||
                 postCode === '' ||
-                date === ''
+                // ||      date === ''
+                !date
               }
             >
               {' '}
               Submit Details
             </button>
             {/* would normally hit the server / API to get a response */}
-            {/* <input type="submit" value="submit"></input> */}
+            {/* <input type='submit' value='submit'></input> */}
           </Link>
         </label>
       </form>
