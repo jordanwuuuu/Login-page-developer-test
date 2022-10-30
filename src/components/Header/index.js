@@ -1,3 +1,4 @@
+import './index.scss'
 import drDoctorImage from '../../assets/images/drdoctor-company-logo.svg';
 import { Link } from 'react-router-dom';
 

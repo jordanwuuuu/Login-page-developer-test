@@ -46,26 +46,28 @@ export function LoginPage() {
       <Header />
       <h1> Please enter your details below:</h1>
       <form>
-        <label htmlFor="lastName">
-          Last Name:
+        <label htmlFor="lastName" className='featureContainer'>
+          Last Name: 
           <input
             type="text"
             name="lastName"
-            className="lastName"
+            className="lastName loginForm"
             onChange={lastNameValidation}
             value={lastName}
-          />
+            placeholder="Last Name"
+            />
           {lastNameError ? (
-            <p className="error">Last Name must be under 50 characters</p>
-          ) : null}
+            <p className="errorMessage">Last Name must be under 50 characters</p>
+            ) : null}
+
         </label>
         <br />
-        <label htmlFor="dateOfBirth">
-          Date Of Birth
+        <label htmlFor="dateOfBirth" className='featureContainer'>
+          Date Of Birth: 
           <input
             type="date"
             name="dateOfBirth"
-            className="datePicker"
+            className="dateOfBirth loginForm"
             max={setMaxDateToToday()}
             onChange={(prop) => setDate(prop.target.value)}
           ></input>
@@ -73,17 +75,18 @@ export function LoginPage() {
 
         <br />
 
-        <label htmlFor="postCode">
-          Post Code:
+        <label htmlFor="postCode" className='featureContainer'>
+          Post Code: 
           <input
             type="text"
             name="postCode"
-            className="postCode"
+            className="postCode loginForm"
             onChange={addressValidation}
             value={postCode}
+            placeholder="Postcode"
           ></input>
           {postCodeError ? (
-            <p className="error">
+            <p className="errorMessage">
               Post Code must be between 5-7 alphanumeric characters only
             </p>
           ) : null}
@@ -91,17 +94,17 @@ export function LoginPage() {
 
         <br />
 
-        <label htmlFor="submitDetails">
+        <label htmlFor="submitDetails" className='featureContainer'>
           <Link to="/displayContactDetails">
             <button
               type="submit"
               value="fakeSubmit"
+              className="submitButton loginForm"
               disabled={
                 lastNameError ||
                 postCodeError ||
                 lastName.replace(/\s/g, '') === '' ||
                 postCode === '' ||
-                // ||      date === ''
                 !date
               }
             >

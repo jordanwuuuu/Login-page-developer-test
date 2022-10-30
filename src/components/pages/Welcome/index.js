@@ -6,7 +6,9 @@ export function WelcomePage() {
     <>
       <Header />
       <h1> Welcome!</h1>
-      <h2 className='successMessage'>Successful login!</h2>
+      <div className="featureContainer">
+        <h2 className="successMessage">Successful login!</h2>
+      </div>
     </>
   );
 }

@@ -34,22 +34,29 @@ export function EnterAuthCode() {
           ? localStorage.getItem('contactDetail')
           : 'chosen contact detail'}
       </h2>
-      <h3>
-        <Link to="/displayContactDetails">
-          <button>Choose a different Contact detail</button>
-        </Link>
-      </h3>
+      <div className="featureContainer">
+        <h3>
+          <Link to="/displayContactDetails">
+            <button>Choose a different Contact detail</button>
+          </Link>
+        </h3>
 
-      <input className="authCode" type="text" onChange={checkAuthCode}></input>
-      <br />
-      <Link to="/welcome">
-        <button aria-label="submitAuthCode" onClick={checkAuthorisation}>
-          Submit{' '}
-        </button>
-      </Link>
-      {error ? (
-        <p className="error"> Wrong Authorisation code entered</p>
-      ) : null}
+        <input
+          className="authCode"
+          type="text"
+          onChange={checkAuthCode}
+          placeholder="Enter Authorisation Code"
+        ></input>
+        {error ? (
+          <p className="errorMessage"> Wrong authorisation code entered</p>
+        ) : null}
+        <br />
+        <Link to="/welcome">
+          <button aria-label="submitAuthCode" onClick={checkAuthorisation}>
+            Submit{' '}
+          </button>
+        </Link>
+      </div>
     </>
   );
 }
