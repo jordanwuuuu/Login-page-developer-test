@@ -1,3 +1,4 @@
+import './index.scss';
 import { Header } from '../../Header';
 
 export function WelcomePage() {
@@ -5,7 +6,7 @@ export function WelcomePage() {
     <>
       <Header />
       <h1> Welcome!</h1>
-      <h2>Successful login!</h2>
+      <h2 className='successMessage'>Successful login!</h2>
     </>
   );
 }

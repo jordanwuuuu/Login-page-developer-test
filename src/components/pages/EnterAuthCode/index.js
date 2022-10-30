@@ -1,3 +1,4 @@
+import './index.scss';
 import { Header } from '../../Header';
 import { Link } from 'react-router-dom';
 
@@ -12,14 +13,11 @@ export function EnterAuthCode() {
           <button>Choose a different Contact detail?</button>
         </Link>
       </h3>
-      
-      <input type='number' max='9999'>
-      </input>
-      <br/>
+
+      <input className="authCode" type="number" max='9999'></input>
+      <br />
       <Link to="/welcome">
-        <button aria-label='submitAuthCode'>
-            Submit
-        </button>
+        <button aria-label="submitAuthCode">Submit</button>
       </Link>
     </>
   );

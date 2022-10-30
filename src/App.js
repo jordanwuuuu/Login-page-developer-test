@@ -1,9 +1,10 @@
-import './App.css';
+import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import { LoginPage } from './components/pages/Login';
-import { PickContactDetailForAuth } from './components/pages/PickContactDetailForAuth';
+import { DisplayContactDetailForAuth } from './components/pages/DisplayContactDetailForAuth';
 import { EnterAuthCode } from './components/pages/EnterAuthCode';
 import { WelcomePage } from './components/pages/Welcome';
+import { NotFound } from './components/pages/NotFound';
 
 function App() {
   return (
@@ -11,11 +12,12 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route
-          path="/pickContactDetails"
-          element={<PickContactDetailForAuth />}
+          path="/displayContactDetails"
+          element={<DisplayContactDetailForAuth />}
         />
         <Route path="/enterAuthCode" element={<EnterAuthCode />}></Route>
         <Route path="/welcome" element={<WelcomePage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
