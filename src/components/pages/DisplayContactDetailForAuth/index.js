@@ -3,24 +3,6 @@ import { Header } from '../../Header';
 import { Link } from 'react-router-dom';
 
 export function DisplayContactDetailForAuth() {
-  // const [contactDetailLink, setContactDetailLink] = useState('/enterAuthCode');
-
-  // let createLinkPath = (chosenContactDetail) => {
-  //   switch (chosenContactDetail) {
-  //     case 'mobile':
-  //       setContactDetailLink('/enterAuthCode#mobile');
-  //       break;
-  //     case 'landLine':
-  //       setContactDetailLink('/enterAuthCode#landline');
-  //       break;
-  //     case 'email':
-  //       setContactDetailLink('/enterAuthCode#email');
-  //       break;
-  //     default:
-  //       setContactDetailLink('/enterAuthCode');
-  //   }
-  //   console.log('>> Set to:', chosenContactDetail);
-  // };
   const storeContactDetail = ({ target }) => {
     localStorage.setItem('contactDetail', target.value);
   };

@@ -3,49 +3,52 @@ import { Header } from '../../Header';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
+const LOCALSTORAGE_KEY = 'contactDetail';
+
 export function EnterAuthCode() {
+  const correctAuthCode = '0000';
   const [authorised, setAuthorisedStatus] = useState(false);
   const [error, setError] = useState(false);
 
-  let checkAuthCode = ({ target }) => {
-    if (target.value === '0000') {
+  const checkAuthCode = ({ target }) => {
+    if (target.value === correctAuthCode) {
       setAuthorisedStatus(true);
     } else {
       setAuthorisedStatus(false);
     }
   };
 
-  const checkAuthorisation = (e) => {
+  const checkAuthorisation = (prop) => {
     if (authorised) {
       setError(false);
     } else {
       setError(true);
-      e.preventDefault();
+      prop.preventDefault();
     }
   };
+
   return (
     <>
       <Header />
       <h1> Enter Authorisation Code</h1>
-      <h2>
-        {' '}
-        Details sent to{' '}
-        {localStorage.getItem('contactDetail')
-          ? localStorage.getItem('contactDetail')
+      <h2>Details sent to</h2>
+      <h2 className='contactDetails'>
+        {localStorage.getItem(LOCALSTORAGE_KEY)
+          ? localStorage.getItem(LOCALSTORAGE_KEY)
           : 'chosen contact detail'}
       </h2>
 
       <div className="featureContainer">
-          <Link to="/displayContactDetails">
-            <button>Choose a different Contact detail</button>
-          </Link>
-<br/>
-<br/>
+        <Link to="/displayContactDetails">
+          <button>Choose a different Contact detail</button>
+        </Link>
+        <br />
+        <br />
         <input
           className="authCode"
           type="text"
           onChange={checkAuthCode}
-          placeholder="Enter Authorisation Code"
+          placeholder="Enter Code"
         ></input>
         {error ? (
           <p className="errorMessage"> Wrong authorisation code entered</p>
@@ -57,7 +60,7 @@ export function EnterAuthCode() {
           </button>
         </Link>
         <br />
-        <br/>
+        <br />
       </div>
     </>
   );

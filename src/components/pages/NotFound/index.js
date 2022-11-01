@@ -1,4 +1,3 @@
-import './index.scss';
 import { Header } from '../../Header';
 
 export function NotFound() {

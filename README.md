@@ -15,8 +15,8 @@ These are:
 
 It should automatically open in your localhost, port 3000 (`http://localhost:3000`)
 
-Let me know if you have any issues! 
+Let me know if you have any issues!
 
-I will also attach the code in a zip file along with a recording of the app working in case anything goes wrong!
+I will also attach the code in a zip file along with a recording of the app working with the submission, just in case anything goes wrong!
 
 Thanks for Reviewing
