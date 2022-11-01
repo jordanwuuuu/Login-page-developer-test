@@ -34,13 +34,13 @@ export function EnterAuthCode() {
           ? localStorage.getItem('contactDetail')
           : 'chosen contact detail'}
       </h2>
+
       <div className="featureContainer">
-        <h3>
           <Link to="/displayContactDetails">
             <button>Choose a different Contact detail</button>
           </Link>
-        </h3>
-
+<br/>
+<br/>
         <input
           className="authCode"
           type="text"
@@ -56,6 +56,8 @@ export function EnterAuthCode() {
             Submit{' '}
           </button>
         </Link>
+        <br />
+        <br/>
       </div>
     </>
   );

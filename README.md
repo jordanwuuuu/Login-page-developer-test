@@ -1,26 +1,22 @@
-# How to run the devloper test
+# DrDoctor Interview Task
 
-## Available Scripts
+This app is written using React and uses Sass for CSS purposes.
+I've also installed packages for routing and some icons.
 
-In the project directory, you can run:
+These are:
 
-### `npm start`
+- `react-router-dom`
+- `@fortawesome/free-solid-svg-icons`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to run the devloper test
 
+1. `npm install` the modules required to run this project
+2. `npm run start` to run the app in development mode.
 
-### `npm test`
+It should automatically open in your localhost, port 3000 (`http://localhost:3000`)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Let me know if you have any issues! 
 
-### `npm run build`
+I will also attach the code in a zip file along with a recording of the app working in case anything goes wrong!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Thanks for Reviewing

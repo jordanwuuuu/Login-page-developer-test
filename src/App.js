@@ -1,4 +1,3 @@
-import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import { LoginPage } from './components/pages/Login';
 import { DisplayContactDetailForAuth } from './components/pages/DisplayContactDetailForAuth';
