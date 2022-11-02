@@ -10,8 +10,9 @@ These are:
 
 ## How to run the devloper test
 
-1. `npm install` the modules required to run this project
-2. `npm run start` to run the app in development mode.
+1. `nvm use` to set the right node version.
+2. `npm install` the modules required to run this project.
+3. `npm run start` to run the app in development mode.
 
 It should automatically open in your localhost, port 3000 (`http://localhost:3000`)
 
